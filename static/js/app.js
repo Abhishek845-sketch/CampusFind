@@ -54,4 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
     });
   }
+  // --- Print Button Logic ---
+  const printBtn = document.getElementById('print-btn');
+  if (printBtn) {
+    printBtn.addEventListener('click', () => {
+      window.print();
+    });
+  }
 });

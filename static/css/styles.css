@@ -40,3 +40,46 @@
   background: #fff0ef;
   color: #b5433b;
 }
+/* --- Print Styles --- */
+@media print {
+  /* Hide navigation, footers, and interactive buttons */
+  .site-header,
+  .site-footer,
+  .back-link,
+  #print-btn,
+  .copy-email-btn,
+  form,
+  .button-wide,
+  .detail-note,
+  .returned-banner {
+    display: none !important;
+  }
+
+  /* Reset backgrounds and enforce black text for printer ink savings */
+  body, 
+  .detail-page, 
+  .detail-main, 
+  .detail-sidebar {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Remove borders and shadows for a cleaner paper layout */
+  .detail-main,
+  .detail-sidebar {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  /* Stack the layout vertically so it doesn't get squished on standard paper */
+  .detail-layout {
+    display: block !important;
+  }
+
+  .detail-sidebar {
+    margin-top: 30px !important;
+    padding-top: 30px !important;
+    border-top: 1px solid #ccc !important;
+  }
+}
